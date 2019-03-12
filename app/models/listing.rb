@@ -4,4 +4,5 @@ class Listing < ApplicationRecord
   validates :name, :description, :price, :image, presence: true
   validates :price, numericality: { greater_than: 0}
   belongs_to :user
+  has_many :orders
 end
